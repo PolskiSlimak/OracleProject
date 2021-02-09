@@ -4,10 +4,7 @@ import com.sun.istack.Nullable;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -15,16 +12,22 @@ import java.util.Date;
 public class Employees {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long employee_id;
+    private Long employee_id;
 
-    String first_name;
-    String last_name;
-    String email;
-    String phone_number;
-    Date hire_date;
-    String job_id;
-    Float salary;
-    Float commission_pct;
-    Long manager_id;
-    Long department_id;
+    private String first_name;
+    private String last_name;
+    private String email;
+    private String phone_number;
+    private Date hire_date;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "job_id")
+    private Jobs job_id;
+    private Float salary;
+    private Float commission_pct;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "manager_id")
+    private Long manager_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "department_id")
+    private Departments department;
 }

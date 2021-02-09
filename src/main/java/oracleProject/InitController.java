@@ -1,26 +1,49 @@
 package oracleProject;
 
-import oracleProject.database.Employees;
-import oracleProject.database.EmployeesService;
+import oracleProject.database.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class InitController {
 	@Autowired
-	EmployeesService employeesService;
+	EntitiesService entitiesService;
 
 	@RequestMapping("/employees")
 	public List<Employees> employees() {
-		return employeesService.getAllEmployees();
+		return entitiesService.getAllEmployees();
 	}
-	@RequestMapping("/employees/{id}")
-	public Optional<Employees> getParticularEmployee(@PathVariable(value="id") Long id) {
-		return employeesService.getParticularEmployee(id);
+
+	@RequestMapping("/countries")
+	public List<Countries> countries() {
+		return entitiesService.getAllCountries();
+	}
+
+	@RequestMapping("/departments")
+	public List<Departments> departments() {
+		return entitiesService.getAllDepartments();
+	}
+
+	@RequestMapping("/jobhistory")
+	public List<JobHistory> jobHistory() {
+		return entitiesService.getAllJobHistory();
+	}
+
+	@RequestMapping("/jobs")
+	public List<Jobs> jobs() {
+		return entitiesService.getAllJobs();
+	}
+
+	@RequestMapping("/locations")
+	public List<Locations> locations() {
+		return entitiesService.getAllLocations();
+	}
+
+	@RequestMapping("/regions")
+	public List<Regions> regions() {
+		return entitiesService.getAllRegions();
 	}
 }
