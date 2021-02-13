@@ -7,6 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" />
+          <factory-entry name="spring-boot" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -124,5 +125,8 @@
     <orderEntry type="library" name="Maven: com.oracle.database.ha:simplefan:19.3.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.oracle.database.ha:ons:19.3.0.0" level="project" />
     <orderEntry type="library" name="Maven: cn.easyproject:orai18n:12.1.0.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.httpcomponents:httpclient:4.5.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: commons-codec:commons-codec:1.14" level="project" />
   </component>
 </module>

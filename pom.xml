@@ -66,6 +66,11 @@
 			<artifactId>orai18n</artifactId>
 			<version>12.1.0.2.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<!-- end::tests[] -->
 	</dependencies>
 
