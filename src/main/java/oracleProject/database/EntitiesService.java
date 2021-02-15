@@ -26,8 +26,16 @@ public class EntitiesService {
         return employeesRepo.findAll();
     }
 
+    public void setEmployees(Employees employees) {
+        employeesRepo.save(employees);
+    }
+
     public List<Countries> getAllCountries() {
         return countriesRepository.findAll();
+    }
+
+    public void setCountries(Countries countries) {
+        countriesRepository.save(countries);
     }
 
     public List<Departments> getAllDepartments() {

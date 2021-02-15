@@ -14,10 +14,10 @@ public class JobHistory {
     private JobHistoryId jobHistoryId;
 
     private Date end_date;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "job_id")
-    private Jobs job;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
-    private Departments department;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "job_id")
+    private String job_id;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "department_id")
+    private Long department_id;
 }

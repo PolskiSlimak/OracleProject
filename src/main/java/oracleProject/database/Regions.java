@@ -13,7 +13,6 @@ import javax.persistence.Id;
 @Setter
 public class Regions {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long region_id;
 
     private String region_name;

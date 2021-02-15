@@ -11,7 +11,6 @@ import java.util.Date;
 @Setter @Getter
 public class Employees {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employee_id;
 
     private String first_name;
@@ -19,15 +18,15 @@ public class Employees {
     private String email;
     private String phone_number;
     private Date hire_date;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "job_id")
-    private Jobs job_id;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "job_id")
+    private String job_id;
     private Float salary;
     private Float commission_pct;
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "manager_id")
     private Long manager_id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
-    private Departments department;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "department_id")
+    private Long department_id;
 }

@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Getter
 public class Departments {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long department_id;
 
     private String department_name;
@@ -18,7 +17,7 @@ public class Departments {
 //    @JoinColumn(name = "manager_id")
     private Long manager_id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "location_id")
-    private Locations location;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "location_id")
+    private Long location_id;
 }

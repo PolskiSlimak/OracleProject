@@ -10,11 +10,10 @@ import javax.persistence.*;
 @Getter
 public class Countries {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String country_id;
 
     private String country_name;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "region_id")
-    private Regions region;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "region_id")
+    private Long region_id;
 }
